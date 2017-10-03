@@ -1,0 +1,23 @@
+<template>
+  <h1>${heading}</h1>
+
+  <form submit.trigger="addMood()">
+    <input type="number" value.bind="moodRating">
+    <input type="text" value.bind="moodDescription">
+    <input type="text" value.bind="moodTrigger">
+    <input type="text" value.bind="moodImplication">
+    <button type="submit">Add Mood</button>
+  </form>
+
+  
+
+  <ul>
+    <li repeat.for="mood of moods">
+      <span>${mood.rating}</span>
+      <span>${mood.description}</span>
+      <span>${mood.implication}</span>
+      <span>${mood.timestamp}</span>
+    </li>    
+  </ul>
+
+</template>
